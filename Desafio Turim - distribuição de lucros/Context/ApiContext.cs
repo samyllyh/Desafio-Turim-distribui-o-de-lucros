@@ -1,0 +1,15 @@
+﻿using Desafio_Turim.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace Desafio_Turim.Context
+{
+    public class ApiContext : DbContext
+    {
+        protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseInMemoryDatabase(databaseName: "FuncionariosDb");
+        }
+
+        public DbSet<Funcionarios> funcionarios { get; set; }
+    }
+}

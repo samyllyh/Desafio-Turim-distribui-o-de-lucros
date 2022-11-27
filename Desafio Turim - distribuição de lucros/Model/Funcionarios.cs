@@ -4,7 +4,7 @@ namespace Desafio_Turim.Model
 {
     public class Funcionarios
     {
-        public int Matricula { get; set; }
+        public int MatriculaId { get; set; }
 
         public string Nome { get; set; }
 
@@ -14,6 +14,6 @@ namespace Desafio_Turim.Model
 
         public int Salario { get; set; }
 
-        public DateTime DataAdmissao { get; set; }
+        public int DataAdmissao { get; set; }
     }
 }
