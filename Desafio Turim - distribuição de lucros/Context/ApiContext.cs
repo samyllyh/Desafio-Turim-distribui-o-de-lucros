@@ -10,6 +10,6 @@ namespace Desafio_Turim.Context
             optionsBuilder.UseInMemoryDatabase(databaseName: "FuncionariosDb");
         }
 
-        public DbSet<Funcionarios> funcionarios { get; set; }
+        public DbSet<Funcionarios> Funcionarios { get; set; }
     }
 }
