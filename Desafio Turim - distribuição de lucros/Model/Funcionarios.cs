@@ -1,9 +1,11 @@
 ﻿using Desafio_Turim.Model.Enum;
+using System.ComponentModel.DataAnnotations;
 
 namespace Desafio_Turim.Model
 {
     public class Funcionarios
     {
+        [Key]
         public int MatriculaId { get; set; }
 
         public string Nome { get; set; }

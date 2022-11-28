@@ -32,7 +32,7 @@ namespace Desafio_Turim.Controllers
         {
             try
             {
-                var result = 0;
+                int result = 0;
                 foreach (var funcionario in funcionarios)
                 {
                     var pesoArea = CalculoTRA.GetArea(funcionario);
@@ -68,6 +68,20 @@ namespace Desafio_Turim.Controllers
                 return BadRequest("dados invalidos");
             }
         }
+
+        /* [HttpPost("/distribuicao")]
+         public ActionResult PostDistribuicao(int valor)
+         {
+             try
+             {
+                 int distribution = Int32.Parse(Console.ReadLine());
+             }
+             catch (Exception)
+             {
+
+                 throw;
+             }
+         }*/
 
         //alteracao das dicas completa, tanto o titudo como a descricao, trocar pelo patch se quiser apenas alterar uma das informacoes
         [HttpPut("{id:int}")]

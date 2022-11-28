@@ -11,7 +11,7 @@ namespace Desafio_Turim.TRA
         {
             try
             {
-                var result = 0;
+                int result;
                 if(pesoArea == 1)
                 {
                     result = (funcionarios.Salario * PesoAdmissao) + (funcionarios.Salario * pesoArea) / funcionarios.Salario * pesoSalario;
