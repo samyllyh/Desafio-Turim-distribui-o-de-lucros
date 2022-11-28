@@ -1,4 +1,5 @@
 ﻿using Desafio_Turim.Model;
+using Desafio_Turim.TRA;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,8 +14,15 @@ namespace Desafio_Turim.Controllers
         {
             try
             {
-                var result = CalculoTRA.Distribuicao(funcionarios);
+                int PesoArea = CalculoTRA.GetArea(funcionarios);
+                int PesoSalario = CalculoTRA.GetSalario(funcionarios);
+                int pesoAdimissao = CalculoTRA.GetDataAdmissao(funcionarios);
 
+                foreach(var funcionario in funcionarios)
+                {
+                    var result = CalculoTRA.Distribuicao(PesoArea, PesoSalario, pesoAdimissao, funcionarios);
+                }
+                
                 return Ok(result);
             }
             catch (Exception)

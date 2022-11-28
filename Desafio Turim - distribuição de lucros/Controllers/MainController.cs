@@ -25,5 +25,20 @@ namespace Desafio_Turim.Controllers
                return BadRequest("erro ao buscar funcionarios");
             }
         }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<Funcionarios>> GetAllDistribuicao()
+        {
+            try
+            {
+                var distribuicai = _context.funcionarios.ToList();
+            }
+            catch (global::System.Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }
