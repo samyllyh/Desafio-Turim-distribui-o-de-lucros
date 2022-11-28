@@ -27,7 +27,7 @@ namespace Desafio_Turim.Controllers
                return BadRequest("erro ao buscar funcionarios");
             }
         }
-        [HttpGet]
+        [HttpGet("/distribuicao")]
         public ActionResult ViewDistribuicao(List<Funcionarios> funcionarios)
         {
             try

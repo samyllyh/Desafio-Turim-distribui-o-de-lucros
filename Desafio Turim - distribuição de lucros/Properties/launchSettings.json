@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Desafio_Turim___distribuição_de_lucros": {
+    "Desafio_Turim": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
