@@ -13,15 +13,11 @@ namespace Desafio_Turim.TRA
             {
                 int result;
                 if(pesoArea == 1)
-                {
-                    result = (funcionarios.Salario * PesoAdmissao) + (funcionarios.Salario * pesoArea) / funcionarios.Salario * pesoSalario;
-                    return result;
-                }
+                    return result = (funcionarios.Salario * PesoAdmissao) + (funcionarios.Salario * pesoArea) / funcionarios.Salario * pesoSalario;
+        
                 if(pesoArea == 2)
-                {
-                    result = (funcionarios.Salario * PesoAdmissao) + (funcionarios.Salario * pesoArea) / funcionarios.Salario * pesoSalario;
-                    return result;
-                }
+                    return result = (funcionarios.Salario * PesoAdmissao) + (funcionarios.Salario * pesoArea) / funcionarios.Salario * pesoSalario;
+
                 if(pesoArea == 3)
                 {
                     result = (funcionarios.Salario * PesoAdmissao) + (funcionarios.Salario * pesoArea) / funcionarios.Salario * pesoSalario;
@@ -58,7 +54,7 @@ namespace Desafio_Turim.TRA
                 if (funcionarios.Area == Area_de_atuacao.Diretoria)
                     return 1;
                 
-                if(funcionarios.Area == Area_de_atuacao.Servocos_Gerais)
+                if(funcionarios.Area == Area_de_atuacao.Servicos_Gerais)
                     return 3;
                 
                 if(funcionarios.Area == Area_de_atuacao.Relecionamento_cliente)

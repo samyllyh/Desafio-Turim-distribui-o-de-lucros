@@ -6,7 +6,7 @@
         Cotabilidade = 2,
         Financiero = 3,
         Tecnologia = 4,
-        Servocos_Gerais = 5,
+        Servicos_Gerais = 5,
         Relecionamento_cliente = 6
     }
 }
