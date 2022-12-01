@@ -51,7 +51,7 @@ namespace Desafio_Turim.Context
 
         public List<ResultDistribuicao> ViewDistribuicao(List<Funcionarios> funcionarios)
         {
-            List<ResultDistribuicao> results = new List<ResultDistribuicao>();
+            List<ResultDistribuicao> results = new();
             
             foreach (var funcionario in funcionarios)
             {
@@ -60,8 +60,10 @@ namespace Desafio_Turim.Context
                 int pesoSalario = CalculoTRA.GetSalario(funcionario);
                 int pesoAdimissao = CalculoTRA.GetDataAdmissao(funcionario);
 
-                ResultDistribuicao resultDistribuicao = new ResultDistribuicao();
-                resultDistribuicao.ValorDistribuicao = CalculoTRA.Distribuicao(pesoArea, pesoSalario, pesoAdimissao, funcionario);
+                ResultDistribuicao resultDistribuicao = new()
+                {
+                    ValorDistribuicao = CalculoTRA.Distribuicao(pesoArea, pesoSalario, pesoAdimissao, funcionario)
+                };
                 results.Add(resultDistribuicao);
             }
 

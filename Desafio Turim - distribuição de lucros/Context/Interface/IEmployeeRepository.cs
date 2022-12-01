@@ -8,5 +8,6 @@ namespace Desafio_Turim.Context.Interface
         public int Post(Funcionarios funcionarios);
         public Funcionarios Put(int id, Funcionarios funcionarios);
         public bool Delete(int id);
+        public double PostDistribuicao(int valor);
     }
 }

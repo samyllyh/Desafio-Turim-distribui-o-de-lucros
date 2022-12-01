@@ -1,11 +1,7 @@
 using Desafio_Turim.Context;
-using Desafio_Turim.Context.Interface;
 using Desafio_Turim.Model;
-using Desafio_Turim.TRA;
 using Desafio_Turim___distribuição_de_lucros.Model;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace Desafio_Turim.Controllers
 {
@@ -20,15 +16,15 @@ namespace Desafio_Turim.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Funcionarios>> Get()
+        public ActionResult<IEnumerable<Funcionarios>> Get()
         {
-            return Ok(_employeeRepository.GetHashCode);
+            return Ok(_employeeRepository.GetAllFuncionarios);
         }
 
         [HttpPost]
-        public ActionResult Post()
+        public ActionResult Post(Funcionarios funcionarios)
         {
-            return Ok(_employeeRepository.Post);
+            return Ok(_employeeRepository.Post(funcionarios));
         }
 
         [HttpPut]
